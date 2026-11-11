@@ -1,0 +1,27 @@
+{
+  "name": "seed-guard",
+  "version": "0.1.0",
+  "description": "Finds recovery phrases and private keys left in your notes and screenshots. Runs on your Mac with QVAC; nothing leaves it.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olevasyliev/seed-guard.git"
+  },
+  "private": true,
+  "type": "module",
+  "main": "src/main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "app": "sh scripts/make-app.sh ~/Applications && open \"$HOME/Applications/Seed Guard.app\"",
+    "helper": "sh scripts/build-helper.sh",
+    "fixtures": "node eval/make-fixtures.mjs",
+    "eval": "node eval/run.mjs"
+  },
+  "dependencies": {
+    "@qvac/sdk": "0.22.0",
+    "@scure/bip39": "1.6.0"
+  },
+  "devDependencies": {
+    "electron": "44.5.1"
+  }
+}

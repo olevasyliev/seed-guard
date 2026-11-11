@@ -1,0 +1,7 @@
+node_modules
+node_modules.nosync/
+build
+build.nosync/
+eval/fixtures/
+.DS_Store
+*.log
